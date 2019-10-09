@@ -5,6 +5,7 @@ module.exports = {
   modulePath: path.resolve('public'),
 
   // template 目录
+  // 默认是 Dongdong/module
   moduleTemplatePath: path.resolve('Dongdong/templates/module'),
   
   // project git url
