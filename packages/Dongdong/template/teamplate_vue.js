@@ -35,7 +35,7 @@ module.exports = {
 	      this.a = v - 1
 	    }
 	  }
-	}
+	},
     data () {
       return {
         test: {}
