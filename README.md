@@ -35,3 +35,7 @@ npm unlink <CliName>
 #### 0.3.0版本
 
 * 添加 vue模版
+
+#### 0.4.0版本
+
+* 添加git push

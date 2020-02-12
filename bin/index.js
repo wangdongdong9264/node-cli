@@ -12,13 +12,14 @@ const fs = require('fs')
 const initial = require('../packages/commands/initial.js')
 const gmodule = require('../packages/commands/module.js')
 const stencil = require('../packages/commands/stencil.js')
+const publish = require('../packages/commands/publish.js')
 let config = {} // 配置文件信息
 if (fs.existsSync(path.resolve('Dongdong.config.js'))) {
   config = require(path.resolve('Dongdong.config.js'))
 }
 
 program
-  .version('0.3.0', '-v, --version')
+  .version('0.4.0', '-v, --version')
   .command('init')
   .description('initialize your config')
   .action(initial)
@@ -33,5 +34,12 @@ program
   .command('template')
   .description('created template')
   .action(stencil)
+
+program
+  .command('publish')
+  .description('easy git push')
+  .action(function() {
+    publish(config)
+  })
 
 program.parse(process.argv)
