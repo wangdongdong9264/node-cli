@@ -1,9 +1,17 @@
 {
   "name": "node_cli",
   "version": "1.0.0",
-  "main": "index.js",
-  "author": "Dongdong",
+  "main": "./bin/index.js",
+  "author": "dongdong Wang",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wangdongdong9264/node-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wangdongdong9264/node-cli/issues"
+  },
+  "homepage": "https://github.com/wangdongdong9264/node-cli",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
