@@ -1,5 +1,5 @@
 {
-  "name": "node_cli",
+  "name": "dongdong_cli",
   "version": "1.0.0",
   "main": "./bin/index.js",
   "author": "dongdong Wang",
