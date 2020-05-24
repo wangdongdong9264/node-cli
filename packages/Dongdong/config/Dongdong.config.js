@@ -29,6 +29,6 @@ module.exports = {
       prefix: 'xxx.xxx.xyz'
     }
   },
-  // 构建后发布 ？
+  // 是否上传cdn
   autoPublish: false
 }

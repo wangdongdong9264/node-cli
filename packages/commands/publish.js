@@ -9,7 +9,7 @@ const shell = require('../lib/shell')
 let config = {
   autoPublish: false
 }
-
+  
 function gitCommit() {
   inquirer.prompt([
     {
