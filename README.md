@@ -39,3 +39,7 @@ npm unlink <CliName>
 #### 0.4.0版本
 
 * 添加git push
+
+#### 0.4.1版本
+
+* 添加vue typeScript 模版
