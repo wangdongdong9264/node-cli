@@ -4,6 +4,7 @@ const fs = require('fs')
 const chalk = require('chalk')
 const inquirer = require('inquirer')
 const { vueTemplate, entryTemplate } = require('../Dongdong/template/teamplate_vue.js')
+const { vueTSTemplate } = require('../Dongdong/template/teamplate_vue_ts.js')
 
 const generateFile = (path, data) => {
   if (fs.existsSync(path)) {
@@ -22,6 +23,10 @@ const generateFile = (path, data) => {
   fs.writeFileSync(path, data, 'utf8')
 }
 
+function selectTS() {
+  
+}
+
 module.exports = function () {
   // todo input用户输入 (容错)
   inquirer
@@ -37,6 +42,16 @@ module.exports = function () {
         filter: (val) => val.toLowerCase()
       },
       {
+        name: 'template-language',
+        type: 'list',
+        message: `请选择语言`,
+        choices: [
+         'Javascript',
+         'Typescript'
+        ],
+        filter: (val) => val.toLowerCase()
+      },
+      {
         name: 'template-name',
         type: 'input',
         message: `请输入要生成的文件名称(不需要文件后缀)`
@@ -44,6 +59,7 @@ module.exports = function () {
     ]).then(answers => {
       const type = answers['new-template']
       const name = answers['template-name']
+      const language = answers['template-language']
       const inputName = String(name).trim().toString()
       let componentName = ''
       // 检查
@@ -62,7 +78,14 @@ module.exports = function () {
         // 文件操作
         try {
           const targetFilePath = path.resolve(componentName)
-          generateFile(targetFilePath, vueTemplate(componentName))
+          const filename = componentName.replace(/\.vue|\.jsx$/, '')
+          let str = ''
+          if (language === 'javascript') {
+            str = vueTemplate(filename)
+          } else {
+            str = vueTSTemplate(filename)
+          }
+          generateFile(targetFilePath, str)
           console.log(chalk.green('生成成功')) 
         } catch (error) {
           console.log(chalk.red(`${error.message}`))

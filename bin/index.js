@@ -19,7 +19,7 @@ if (fs.existsSync(path.resolve('Dongdong.config.js'))) {
 }
 
 program
-  .version('0.4.0', '-v, --version')
+  .version('0.4.1', '-v, --version')
   .command('init')
   .description('initialize your config')
   .action(initial)
