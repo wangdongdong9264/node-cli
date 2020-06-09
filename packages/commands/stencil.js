@@ -21,10 +21,19 @@ const generateFile = (path, data) => {
   //   })
   // })
   fs.writeFileSync(path, data, 'utf8')
+  console.log(chalk.green('生成成功'))
 }
 
-function selectTS() {
-  
+/**
+ * @description 补齐后缀名
+ * @param {*} str 名称
+ * @param {*} checkStr 后缀名
+ */
+function autoSuffix(str, checkStr) {
+  if (!str.endsWith(checkStr)) {
+    return str + checkStr
+  }
+  return str
 }
 
 module.exports = function () {
@@ -70,11 +79,7 @@ module.exports = function () {
       // 添加模版
       if (type === 'vue') {
         // 补全后缀名
-        if (!inputName.endsWith('.vue')) {
-          componentName = inputName + '.vue'
-        } else {
-          componentName = inputName
-        }
+        componentName = autoSuffix(inputName, '.vue')
         // 文件操作
         try {
           const targetFilePath = path.resolve(componentName)
@@ -86,7 +91,6 @@ module.exports = function () {
             str = vueTSTemplate(filename)
           }
           generateFile(targetFilePath, str)
-          console.log(chalk.green('生成成功')) 
         } catch (error) {
           console.log(chalk.red(`${error.message}`))
         }
