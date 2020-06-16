@@ -29,10 +29,11 @@ function copyTemplates(name) {
     files.forEach((file => {
       const curPath = `${parentPath}/${file}`
       const stat = fs.statSync(curPath)
-      const filePath = `${targetRootPath}/${tempPath}/${file}`
+      const url = tempPath ? `${tempPath}/${file}` : `${file}`
+      const filePath = `${targetRootPath}/${url}`
       if (stat.isDirectory()) {
         fs.mkdirSync(filePath)
-        readAndCopyFile(curPath, `${tempPath}/${file}`)
+        readAndCopyFile(curPath, `${url}`)
       } else {
         const contents = fs.readFileSync(curPath, 'utf8')
         fs.writeFileSync(filePath, contents, 'utf8')
@@ -44,7 +45,7 @@ function copyTemplates(name) {
 
 function run(targetRootPath, name) {
   const targetDir = path.join(targetRootPath, name) // 生成的目录
-  if (fs.existsSync(targetDir)) {
+  if (fs.existsSync(targetDir) && name) {
     // 存在目录 则提问是否覆盖
     inquirer
       .prompt([
@@ -75,7 +76,7 @@ function run(targetRootPath, name) {
       })
   } else {
     // 创建目录 复制文件
-    fs.mkdirSync(targetDir)
+    name ? fs.mkdirSync(targetDir) : ''
     copyTemplates(name)
     console.log(chalk.green(`Generate new module "${name}" finished!`))
   }
@@ -90,7 +91,7 @@ function generateModule(meetConfig, name) {
    */
   if (fs.existsSync(targetRootPath)) {
     console.log(chalk.green(`check modulePath ok`))
-    run(targetRootPath, name)
+    run(targetRootPath, name ? name : '')
   } else {
     // 提示是否要创建
     inquirer
@@ -114,7 +115,7 @@ function generateModule(meetConfig, name) {
           return false
         }
         // 执行下一条命令
-        run(targetRootPath, name)
+        run(targetRootPath, name ? name : '')
       })
       .catch(err => {
         console.log(chalk.red(err))

@@ -2,7 +2,8 @@ const path = require('path')
 
 module.exports = {
   // 生成的目标目录
-  modulePath: path.resolve('public'),
+  // modulePath: path.resolve('public'),
+  modulePath: path.resolve('./'),
 
   // template 目录
   // 默认是 Dongdong/module
