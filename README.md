@@ -43,3 +43,7 @@ npm unlink <CliName>
 #### 0.4.1版本
 
 * 添加vue typeScript 模版
+
+#### 0.4.2版本
+
+* 添加 简单的 vue-ts 项目模版
