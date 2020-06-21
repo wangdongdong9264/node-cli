@@ -4,7 +4,7 @@ module.exports = {
     <div class="${compoenntName}"></div>
   </template>
   <script lang="ts">
-  import { Prop, Component, Emit, Vue } from "vue-property-decorator"
+  import { Prop, Component, Emit, Vue } from 'vue-property-decorator'
   @Component
   export default class ${compoenntName} extends Vue {
   
