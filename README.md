@@ -53,3 +53,8 @@ npm unlink <CliName>
 * 恢复之前的 新建逻辑
 * 修复 没有先执行init命令 无法新建（new）
 
+#### 0.5.0版本 todo
+
+* 获取 package.json 中的script
+* 可选择执行 script 脚本命令
+

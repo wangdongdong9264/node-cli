@@ -13,6 +13,7 @@ const initial = require('../packages/commands/initial.js')
 const gmodule = require('../packages/commands/module.js')
 const stencil = require('../packages/commands/stencil.js')
 const publish = require('../packages/commands/publish.js')
+const package = require('../packages/commands/packageScript.js')
 let config = {} // 配置文件信息
 if (fs.existsSync(path.resolve('Dongdong.config.js'))) {
   config = require(path.resolve('Dongdong.config.js'))
@@ -40,6 +41,13 @@ program
   .description('easy git push')
   .action(function() {
     publish(config)
+  })
+
+program
+  .command('script')
+  .description('get package.json script')
+  .action(function () {
+    package()
   })
 
 program.parse(process.argv)
