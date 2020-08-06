@@ -94,7 +94,7 @@ function Recursion() {
 
 /**
  *
- * @description todo 获取package.json
+ * @description 开始
  */
 function script(url) {
   pwdPath = url.split('/')
