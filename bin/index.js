@@ -47,7 +47,7 @@ program
   .command('script')
   .description('get package.json script')
   .action(function () {
-    package()
+    package(process.cwd())
   })
 
 program.parse(process.argv)
