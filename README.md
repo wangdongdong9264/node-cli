@@ -58,3 +58,7 @@ npm unlink <CliName>
 * 获取 package.json 中的script
 * 可选择执行 script 脚本命令
 
+#### 0.6.0版本
+
+* 上传 oss （七牛/阿里） 
+
