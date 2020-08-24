@@ -6,7 +6,7 @@
 
 ## 开始
 
-```js
+```
 // 标准开头
 #!/usr/bin/env node
 ```
@@ -58,7 +58,7 @@ npm unlink <CliName>
 * 获取 package.json 中的script
 * 可选择执行 script 脚本命令
 
-#### 0.6.0版本
+#### 0.6.0版本 todo
 
-* 上传 oss （七牛/阿里） 
+* 上传 oss （qiniu/ali） 
 
