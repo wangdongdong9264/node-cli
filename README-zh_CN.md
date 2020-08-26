@@ -7,13 +7,13 @@
 </p>
 
 <div align="center">
-A tool to help develop efficiency
+一个帮助开发提高效率的工具
   
-    
 [![NPM version][npm-image]][npm-url]
 
 [npm-image]: http://img.shields.io/npm/v/antd.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/dongdong_cli
+  
 </div>
 
 ## 说明
@@ -29,13 +29,13 @@ A tool to help develop efficiency
 
 ### 测试
 
-```bash
+```sh
 npm link
 ```
 
 #### 取消私有模块
 
-```bash
+```sh
 npm unlink <CliName>
 ```
 
