@@ -4,6 +4,7 @@
 const qiniu = require('qiniu')
 const fs = require('fs')
 const path = require('path')
+const chalk = require('chalk') // 终端彩色输出
 
 let UploadConfig = {}
 let url = ''
@@ -60,7 +61,13 @@ function qn(config) {
       })
     }
     // 执行
-    uploadAll(url)
+    if (fs.existsSync(url)) {
+      uploadAll(url)
+    } else {
+      console.log(chalk.yellow(`Path does not exist ！`))
+    }
+  } else {
+    console.log(chalk.yellow(`Parameter error ！`))
   }
 }
 
