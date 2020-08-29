@@ -1,4 +1,3 @@
-# Dongdong-cli
 
 <p align="center">
   <a href="https://www.npmjs.com/package/dongdong_cli">
@@ -8,7 +7,6 @@
 
 <div align="center">
 A tool to help develop efficiency
-  
     
 [![NPM version][npm-image]][npm-url]
 
@@ -16,68 +14,72 @@ A tool to help develop efficiency
 [npm-url]: https://www.npmjs.com/package/dongdong_cli
 </div>
 
-## 说明
+# Dongdong-cli
 
-基于node `10.16.3`
+Englist | [简体中文](./README-zh_CN.md)
 
-## 开始
+## Description
+
+based on node `10.16.3`
+
+## Start
 
 ```
-// 标准开头
+// Standard beginning
 #!/usr/bin/env node
 ```
 
-### 测试
+### test
 
 ```bash
 npm link
 ```
 
-#### 取消私有模块
+#### Cancel private module
 
 ```bash
 npm unlink <CliName>
 ```
 
-#### 0.0.1版本
+#### 0.0.1 version
 
-* 测试命令是否执行
+* Test whether the command is executed
 
-#### 0.0.2版本
+#### 0.0.2 version
 
-* 增加模版
-* 与配置文件关联
+* Add template
+* Associate with config
 
-#### 0.3.0版本
+#### 0.3.0 version
 
-* 添加 vue模版
+* Add vue template
 
-#### 0.4.0版本
+#### 0.4.0 version
 
-* 添加git push
+* Add git push
 
-#### 0.4.1版本
+#### 0.4.1 version
 
-* 添加vue typeScript 模版
+* Add vue typeScript template
 
-#### 0.4.2版本
+#### 0.4.2 version
 
-* 添加 简单的 vue-ts 项目模版
+* Add simple vue-ts Project template
 
-#### 0.4.3版本
+#### 0.4.3 version
 
-* 恢复之前的 新建逻辑
-* 修复 没有先执行init命令 无法新建（new）
+* restore new logic
+* repair Cannot create new without executing the init command first（new）
 
-#### 0.5.0版本
+#### 0.5.0 version
 
-* 获取 package.json 中的script
-* 可选择执行 script 脚本命令
+* get script in package.json
+* Option to execute script
 
-#### 0.6.0版本 todo
+#### 0.6.0 version TODO
 
-* 上传 oss （qiniu/ali）
+* Upload oss （qiniu/ali）
 
-## 支持
+## support
 
 [jetbrains](https://www.jetbrains.com/?from=dongdong_cli)

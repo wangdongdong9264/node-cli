@@ -1,4 +1,3 @@
-# Dongdong-cli
 
 <p align="center">
   <a href="https://www.npmjs.com/package/dongdong_cli">
@@ -15,6 +14,10 @@
 [npm-url]: https://www.npmjs.com/package/dongdong_cli
   
 </div>
+
+# Dongdong-cli
+
+[Englist](./README.md) | 简体中文
 
 ## 说明
 
