@@ -14,6 +14,7 @@ const gmodule = require('../packages/commands/module.js')
 const stencil = require('../packages/commands/stencil.js')
 const publish = require('../packages/commands/publish.js')
 const package = require('../packages/commands/packageScript.js')
+const upload = require('../packages/commands/upload')
 let config = {} // 配置文件信息
 if (fs.existsSync(path.resolve('Dongdong.config.js'))) {
   config = require(path.resolve('Dongdong.config.js'))
@@ -41,6 +42,13 @@ program
   .description('easy git push')
   .action(function() {
     publish(config)
+  })
+
+program
+  .command('upload')
+  .description('upload oss')
+  .action(function() {
+    upload(config)
   })
 
 program

@@ -23,6 +23,7 @@
     "commander": "^3.0.2",
     "figlet": "^1.2.4",
     "inquirer": "^7.0.0",
+    "qiniu": "^7.3.2",
     "shelljs": "^0.8.3"
   }
 }

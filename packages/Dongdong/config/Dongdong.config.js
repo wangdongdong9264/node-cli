@@ -17,14 +17,13 @@ module.exports = {
 
   // assets config
   upload: {
-    // cdn  阿里OSS - 'alioss', 七牛云 - 'qn'
-    server: '',
+    server: '', // cdn  阿里OSS - 'alioss', 七牛云 - 'qn'
+    srcDir: path.resolve('public/assets'), // 要上传的dist文件夹
     config: {
-      accessKeyId: '',
-      accessKeySecret: '',
+      accessKeyId: '', // AccessKey
+      accessKeySecret: '', // SecretKey
       bucket: '',
       region: '',
-      srcDir: path.resolve('public/assets'), // 要上传的dist文件夹
       ignoreDir: false,
       deduplication: true,
       prefix: 'xxx.xxx.xyz'
