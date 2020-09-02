@@ -30,6 +30,14 @@
 #!/usr/bin/env node
 ```
 
+### 使用
+
+```bash
+
+dongdong -h
+
+```
+
 ### 测试
 
 ```sh

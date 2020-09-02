@@ -29,6 +29,14 @@ based on node `10.16.3`
 #!/usr/bin/env node
 ```
 
+### use
+
+```bash
+
+dongdong -h
+
+```
+
 ### test
 
 ```bash
