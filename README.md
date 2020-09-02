@@ -84,7 +84,7 @@ npm unlink <CliName>
 * get script in package.json
 * Option to execute script
 
-#### 0.6.0 version TODO
+#### 0.6.0 version
 
 * Upload oss （qiniu/ali）
 
