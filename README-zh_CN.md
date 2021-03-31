@@ -85,9 +85,17 @@ npm unlink <CliName>
 * 获取 package.json 中的script
 * 可选择执行 script 脚本命令
 
-#### 0.6.0版本 todo
+#### 0.6.0版本
 
 * 上传 oss （qiniu/ali）
+
+#### 0.6.1版本
+
+* 添加 vue3 ts 模版
+
+#### 0.7.0版 todo
+
+* webpack配置文件
 
 ## 支持
 
