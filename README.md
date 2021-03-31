@@ -88,6 +88,10 @@ npm unlink <CliName>
 
 * Upload oss （qiniu/ali）
 
+#### 0.6.1 version
+
+* Add vue3 typeScript template
+
 ## support
 
 [jetbrains](https://www.jetbrains.com/?from=dongdong_cli)

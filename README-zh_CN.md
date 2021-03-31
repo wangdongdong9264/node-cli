@@ -89,6 +89,10 @@ npm unlink <CliName>
 
 * 上传 oss （qiniu/ali）
 
+#### 0.6.1版本
+
+* 添加 vue3 ts 模版
+
 #### 0.7.0版 todo
 
 * webpack配置文件

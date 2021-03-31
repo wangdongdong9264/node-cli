@@ -5,6 +5,7 @@ const chalk = require('chalk')
 const inquirer = require('inquirer')
 const { vueTemplate, entryTemplate } = require('../Dongdong/template/teamplate_vue.js')
 const { vueTSTemplate } = require('../Dongdong/template/teamplate_vue_ts.js')
+const  { vue3Template } = require('../Dongdong/template/teamplate_vue3')
 
 const generateFile = (path, data) => {
   if (fs.existsSync(path)) {
@@ -45,8 +46,9 @@ module.exports = function () {
         type: 'list',
         message: `请选择要生成文件的类型`,
         choices: [
-         'Vue',
-         'React'
+          'Vue',
+          'vue3',
+          'React'
         ],
         filter: (val) => val.toLowerCase()
       },
@@ -90,6 +92,20 @@ module.exports = function () {
           } else {
             str = vueTSTemplate(filename)
           }
+          generateFile(targetFilePath, str)
+        } catch (error) {
+          console.log(chalk.red(`${error.message}`))
+        }
+      }
+      if (type === 'vue3') {
+        // 补全后缀名
+        componentName = autoSuffix(inputName, '.vue')
+        // 文件操作
+        try {
+          const targetFilePath = path.resolve(componentName)
+          const filename = componentName.replace(/\.vue|\.jsx$/, '')
+          let str = ''
+          str =  vue3Template(filename)
           generateFile(targetFilePath, str)
         } catch (error) {
           console.log(chalk.red(`${error.message}`))
