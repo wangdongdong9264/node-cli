@@ -16,7 +16,7 @@ export default defineComponent({
       require: true
     }
   },
-  setup(prosp, ctx) {
+  setup(props, ctx) {
     const router = useRouter();
     const route = useRoute();
     const queryID = (route.params as any).id;
